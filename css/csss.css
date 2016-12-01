@@ -1,0 +1,55 @@
+.textInButton
+{
+  position: absolute;
+  left: 10px;
+  top: 50px;
+  width: 200px;
+  height: 80px;
+  font-size: 36px;
+  font-family: "Myriad Pro";
+  line-height: 0.4;  
+}
+
+.btn_teach
+{
+  background-image: url("../img/btn.png");
+  position: absolute;  
+  top: 80px;
+  width: 200px;
+  height: 80px;  
+}
+
+.btn_info
+{
+  background-image: url("../img/btn.png");
+  position: absolute;  
+  top: 80px;
+  width: 200px;
+  height: 80px;  
+}
+
+.btn_main
+{
+  background-image: url("../img/btn.png");
+  position: absolute;  
+  top: 80px;
+  width: 200px;
+  height: 80px;  
+}
+
+.logo
+{
+  background-image: url("../img/logo.png");
+  position: absolute;
+  left: 10px;
+  top: 41px;
+  width: 159px;
+  height: 160px; 
+}
+
+body
+{
+	background-image: url("../img/Melamine-wood-001.png");
+	
+}
+
