@@ -1,8 +1,8 @@
 .textInButton
 {
   position: absolute;
-  left: 10px;
-  top: 50px;
+  left: 0.5rem;
+  top: 3.1rem;
   width: 200px;
   height: 80px;
   font-size: 36px;
@@ -10,11 +10,12 @@
   line-height: 0.4;  
 }
 
-.btn_teach
+.btn_main
 {
   background-image: url("../img/btn.png");
   position: absolute;  
-  top: 80px;
+  top: 5rem;
+  left: 10rem;
   width: 200px;
   height: 80px;  
 }
@@ -23,16 +24,18 @@
 {
   background-image: url("../img/btn.png");
   position: absolute;  
-  top: 80px;
+  top: 5rem;
+  left: 15rem;
   width: 200px;
   height: 80px;  
 }
 
-.btn_main
+.btn_teach
 {
   background-image: url("../img/btn.png");
   position: absolute;  
-  top: 80px;
+  top: 5rem;
+  left: 20rem;
   width: 200px;
   height: 80px;  
 }
@@ -41,15 +44,79 @@
 {
   background-image: url("../img/logo.png");
   position: absolute;
-  left: 10px;
-  top: 41px;
+  top: 3rem;
   width: 159px;
   height: 160px; 
 }
 
+div[class^="cols"] 
+{    
+  position: absolute;
+  left: 10rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 body
 {
-	background-image: url("../img/Melamine-wood-001.png");
-	
+	background-image: url("../img/Melamine-wood-001.png");	
+}
+
+ul#navigation 
+{
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  top: 100px;
+  left: 0px;
+  list-style: none;
+  z-index:9999;  
+}
+
+ul#navigation li a
+{
+  display: block;
+  width: 10em;
+  height: 4.9em;    
+  background-repeat:no-repeat;
+  background-position:-2.1rem center;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+
+  /*-moz-box-shadow: 0px 4px 3px #000;
+  -webkit-box-shadow: 0px 4px 3px #000;
+  */
+  opacity: 0.8;
+}
+
+ul#navigation .main a
+{
+    background-image: url(../img/btn.png);    
+}
+
+ul#navigation .about a     
+{
+    background-image: url(../img/btn.png);
+}
+
+ul#navigation .teach a      
+{
+    background-image: url(../img/btn.png);
+}
+
+h3
+{
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 4;
+  color: black;
+}
+
+hr
+{  
+  border: none;
+  height: 0.1em;
+  background-color: black; 
+  margin-top: 17rem;
 }
 
