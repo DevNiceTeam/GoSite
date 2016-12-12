@@ -13,16 +13,26 @@
 	<!-- Основной контейнер -->
   <div class="container">
     <!-- "Шапка" сайта -->
-    <header class="hidden-lg-down">
+    <header class="hidden-lg-down"> <!-- На большом экране -->
        <div class="col-lg-1">
       	<div class="logo"></div>
       </div>
     </header>
-    <header class="hidden-md-up">
-       <div class="cols">
-        <center><div class="logo"></div></center>
+    <header class="hidden-md-up col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3"> <!-- На экране телефона -->
+       <div class="logo_mobile">
+        <center>
+          <div class="logo"></div>
+        </center>
       </div>
     </header>
+     <header class="hidden-sm-down hidden-lg-up col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3"> <!-- На экране планшета -->
+       <div class="logo_table">
+        <center>
+          <div class="logo"></div>
+        </center>
+      </div>
+    </header>
+     <!-- "Шапка" сайта -->
     <!-- Навигационное меню -->
     <nav class="hidden-lg-down"> <!-- На большом экране -->
     	<div class="container">
@@ -46,8 +56,23 @@
 		         <div class="textInButton">
 		         	Уроки
 		         </div>
-		        </div>
-		    </div>    
+		        </div>            
+		       </div> 
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gopFly">
+               <div class="txtGoFly">
+                 Язык программирования Go
+               </div>     
+            </div> 
+          </div> 
+           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gopTxt">
+               Go (часто также Golang) — компилируемый многопоточный язык программирования, разработанный компанией Google. Первоначальная разработка Go началась в сентябре 2007 года, а его непосредственным проектированием занимались Роберт Гризмер, Роб Пайк и Кен Томпсон, занимавшиеся до этого проектом разработки операционной системы Inferno. Официально язык был представлен в ноябре 2009 года. На данный момент его поддержка осуществляется для операционных систем FreeBSD, OpenBSD, Linux, Mac OS X, Windows, начиная с версии 1.3 в язык Go включена экспериментальная поддержка DragonFly BSD, Plan 9 и Solaris, начиная с версии 1.4 — поддержка платформы Android.     
+            </div> 
+            <div class="gopwiki"></div>
+            <div class="gopwatch"></div>
+          </div>           
+          </div>
 		</div>        
       </div>
     </nav>   
@@ -61,17 +86,62 @@
             </li>
             <li class="teach">
               <a href="" title="Время учиться!)"><h3>Уроки</h3></a>
-            </li>         
+            </li>       d  
         </ul>
     </nav>
+    <div class="hidden-sm-down hidden-lg-up"> <!-- На экране таблетки -->    
+      <div class="container">
+        <div class="row"> 
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="btn_main">
+             <div class="textInButton">
+              Главная
+             </div>
+            </div>
+          </div>  
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="btn_info">
+             <div class="textInButton">
+              О GO
+             </div>
+            </div>
+          </div>  
+           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="btn_teach">
+             <div class="textInButton">
+              Уроки
+             </div>
+            </div>            
+           </div>  
+           </nav>        
+           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="gopTxt">
+               Go (часто также Golang) — компилируемый многопоточный язык программирования, разработанный компанией Google. Первоначальная разработка Go началась в сентябре 2007 года, а его непосредственным проектированием занимались Роберт Гризмер, Роб Пайк и Кен Томпсон, занимавшиеся до этого проектом разработки операционной системы Inferno. Официально язык был представлен в ноябре 2009 года. На данный момент его поддержка осуществляется для операционных систем FreeBSD, OpenBSD, Linux, Mac OS X, Windows, начиная с версии 1.3 в язык Go включена экспериментальная поддержка DragonFly BSD, Plan 9 и Solaris, начиная с версии 1.4 — поддержка платформы Android.     
+            </div> 
+            <div class="gopwiki"></div>
+            <div class="gopwatch"></div>
+          </div>           
+          </div>
+    </div>        
+      </div>    
+    <div class="container">
+        <div class="row"> 
+          <div class="hidden-md-up col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="wiki_mobile">
+              <div class="gopwikiMobile"></div>
+            </div>            
+          </div>
+        </div>          
+    </div>      
   </div>
   <!-- 1 линия -->
-  <hr style="border: none; height: 0.1em; background-color: black; margin-top: 17rem;">
+  <hr class="hidden-lg-down" style="border: none; height: 1px; background-color: black; margin-top: 17rem;">
     <!-- :TODO -->
+      
 
-  <hr style="border: none; height: 0.1em; background-color: black; margin-top: 20rem;">
+  <hr class="hidden-lg-down" style="border: none; height: 1px; background-color: black; margin-top: 20rem;">
   <!-- Подвал сайта -->
-  <footer></footer> 
+  
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>

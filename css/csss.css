@@ -49,14 +49,6 @@
   height: 160px; 
 }
 
-div[class^="cols"] 
-{    
-  position: absolute;
-  left: 10rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 body
 {
 	background-image: url("../img/Melamine-wood-001.png");	
@@ -110,4 +102,86 @@ h3
   font-weight: 500;
   line-height: 4;
   color: black;
+}
+
+.gopFly
+{
+  background-image: url("../img/gopFly.png");
+  position: absolute;
+  top: 20rem;
+  left: 3rem;
+  width: 16.7em;
+  height: 14.7em; 
+}
+
+.txtGoFly
+{
+  font-size: 3em;
+  font-family: "Myriad Pro";
+  color: black;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  left: 26rem;
+  top: 5rem;
+  white-space:nowrap;
+}
+
+.gopTxt 
+{
+  font-size: 33px;
+  font-family: "Myriad Pro";
+  color: black;
+  line-height: 1.2;
+  position: absolute;
+  left: -15rem;
+  top: 39rem;
+  width: 814px;
+  height: 631px;
+}
+
+.gopwiki 
+{
+  background-image: url("../img/wiki.png");
+  position: absolute;
+  left: 45rem;
+  top: 37rem;
+  width: 314px;
+  height: 693px;
+}
+
+.gopwatch
+{
+  background-image: url("../img/gopwatch.png");
+  position: absolute;
+  left: 25rem;
+  top: 70rem;
+  width: 17em;
+  height: 10em;
+}
+
+/* Кирпич */
+div[class^="logo_mobile"] 
+{    
+  position: absolute;
+  left: 10rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+div[class^="wiki_mobile"] 
+{    
+  background-image: url("../img/wiki.png");
+  position: absolute;
+  left: 6.5rem;
+  top: 20rem;
+  width: 314px;
+  height: 693px;
+}
+/* Таблетка */
+div[class^="logo_table"] 
+{    
+  position: absolute;
+  left: -6rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
