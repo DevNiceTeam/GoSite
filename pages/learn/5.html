@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Урок 5</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/csss.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/go.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+</head>
+<body>  
+	<!-- Основной контейнер -->
+  <div class="container">
+    <!-- "Шапка" сайта -->
+    <header class="hidden-lg-down"> <!-- На большом экране -->
+       <div class="col-lg-1">
+      	<div class="logo"></div>
+      </div>
+    </header>
+    <header class="hidden-md-up col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3"> <!-- На экране телефона -->
+       <div class="logo_mobile">
+        <center>
+          <div class="logo"></div>
+        </center>
+      </div>
+    </header>
+     <header class="hidden-sm-down hidden-lg-up col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3"> <!-- На экране планшета -->
+       <div class="logo_table">
+        <center>
+          <div class="logo"></div>
+        </center>
+      </div>
+    </header>
+     <!-- "Шапка" сайта -->
+    <!-- Навигационное меню -->
+    <nav class="hidden-lg-down"> <!-- На большом экране -->
+    	<div class="container">
+    		<div class="row">	
+		      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <a href="../../index.html"> <!-- :TODO link -->
+		        <div class="btn_main">
+		         <div class="textInButton">
+		         	Главная
+		         </div>
+		        </div>
+            </a>
+		      </div>	
+		      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+          <a href="../about.html"> 
+		        <div class="btn_info">
+		         <div class="textInButton">
+		         	О GO
+		         </div>
+		        </div>
+            </a>
+		      </div>	
+		       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+           <a href="../learn.html"> <!-- :TODO link -->
+		        <div class="btn_teach">
+		         <div class="textInButton">
+		         	Уроки
+		         </div>
+		        </div>   
+            </a>         
+		       </div> 
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">            
+               <div class="container contains">
+               <div class="bigTxt">
+                 Управление потоком
+               </div>
+    <p>Теперь, когда мы знаем про переменные, самое время написать что-нибудь полезное.
+Сначала создадим программу, которая по очереди с новой строки выводит числа от
+1 до 10. Наших знаний достаточно для того, чтобы написать эту программу так:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">package main
+
+import "fmt"
+
+func main() {
+    fmt.Println(1)
+    fmt.Println(2)
+    fmt.Println(3)
+    fmt.Println(4)
+    fmt.Println(5)
+    fmt.Println(6)
+    fmt.Println(7)
+    fmt.Println(8)
+    fmt.Println(9)
+    fmt.Println(10)
+}
+</code></pre></div>
+<p>или так:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">package main
+import "fmt"
+
+func main() {
+    fmt.Println(`1
+2
+3
+4
+5
+6
+7
+8
+9
+10`)
+}
+</code></pre></div>
+<p>Но писать это будет довольно утомительно, так что нам нужен лучший способ
+несколько раз повторить определенный набор действий.</p>
+
+<h2>For</h2>
+
+<p>Оператор <code>for</code> даёт возможность повторять список инструкций (блок) определённое
+количество раз. Давайте перепишем предыдущую программу, используя оператор <code>for</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">package main
+
+import "fmt"
+
+func main() {
+    i := 1
+    for i &lt;= 10 {
+        fmt.Println(i)
+        i = i + 1
+    }
+}
+</code></pre></div>
+<p>Сначала создается переменная <code>i</code>, хранящая число, которое нужно вывести на
+экран. Затем с помощью ключевого слова <code>for</code> создается цикл, указывается
+условное выражение, которое может принимать значение <code>true</code> или <code>false</code>, и, наконец, сам блок
+для выполнения. Цикл for работает следующим образом:</p>
+
+<ul>
+<li><p>оценивается (выполняется) условное выражение <code>i &lt;= 10</code> («i меньше или равно
+десяти»). Если оно истинно, выполняются инструкции внутри блока. В противном
+случае управление переходит следующей после блока строке кода (в нашем случае
+после цикла ничего нет, поэтому совершается выход из программы);</p></li>
+<li><p>после запуска всех инструкций внутри блока мы возвращаемся в начало цикла и
+повторяем первый шаг.</p></li>
+</ul>
+
+<p>Строка <code>i = i + 1</code> очень важна - без неё выражение <code>i &lt;= 10</code> всегда будет <code>true</code>,
+и выполнение программы никогда не завершится (это называется бесконечным
+циклом).</p>
+
+<p>Следующий пример показывает выполнение программы точно так же, как это делает
+компьютер:</p>
+
+<ul>
+<li>  создать переменную <code>i</code> со значением 1;</li>
+<li>  <code>i</code> меньше или равно <code>10</code>? да;</li>
+<li>  вывести <code>i</code>;</li>
+<li>  присвоить <code>i</code> значение <code>i + 1</code> (теперь равно 2);</li>
+<li>  <code>i</code> меньше или равно <code>10</code>? да;</li>
+<li>  вывести <code>i</code>;</li>
+<li>  присвоить <code>i</code> значение <code>i + 1</code> (теперь равно 3);</li>
+<li>  … </li>
+<li>  присвоить <code>i</code> значение <code>i + 1</code> (теперь равно 11);</li>
+<li>  <code>i</code> меньше или равно <code>10</code>? нет;</li>
+<li>  больше нечего делать, выходим.</li>
+</ul>
+
+<p>В других языках программирования существуют разные виды циклов (while, do,
+until, foreach, …). У Go вид цикла один, но он может использоваться в разных
+случаях. Предыдущую программу можно также записать следующим образом:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">func main() {
+    for i := 1; i &lt;= 10; i++ {
+        fmt.Println(i)
+    }
+}
+</code></pre></div>
+<p>Теперь условное значение включает в себя также и две другие инструкции,
+разделенные точкой с запятой. Сначала инициализируется переменная, затем
+выполняется условное выражение, и в завершении переменная «инкрементируется»
+(добавление 1 к значению переменной является настолько распространённым
+действием, что для этого существует специальный оператор: <code>++</code>; аналогично
+вычитание 1 может быть выполнено с помощью <code>--</code>).</p>
+
+<p>В следующих главах мы увидим и другие способы использования циклов.</p>
+
+<h2>If</h2>
+
+<p>Давайте изменим программу так, чтобы вместо простого вывода чисел 1–10 она также
+указывала, является ли число чётным или нечётным. Вроде этого:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">1 odd
+2 even
+3 odd
+4 even
+5 odd
+6 even
+7 odd
+8 even
+9 odd
+10 even
+</code></pre></div>
+<p>Для начала нам нужен способ узнать, является ли число чётным или нечётным. Самый
+простой способ — это разделить число на 2. Если остатка от деления не будет,
+значит число чётное, иначе — нечётное. Так как же найти остаток от деления на
+Go? Для этого существует оператор <code>%</code>. Например:</p>
+
+<ul>
+<li><code>1 % 2</code> равно <code>1</code>;</li>
+<li><code>2 % 2</code> равно <code>0</code>;</li>
+<li><code>3 % 2</code> равно <code>1</code> и так далее.</li>
+</ul>
+
+<p>Далее нам нужен способ, чтобы выполнять действия в зависимости от условия. Для этого мы
+используем оператор <code>if</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">if i % 2 == 0 {
+    // even
+} else {
+    // odd
+}
+</code></pre></div>
+<p>Оператор <code>if</code> аналогичен оператору <code>for</code> в том, что он выполняет блок в
+зависимости от условия. Оператор также может иметь необязательную <code>else</code> часть.
+Если условие истинно, выполняется блок, расположенный после условия, иначе же
+этот блок пропускается и выполняется блок <code>else</code>, если он присутствует.</p>
+
+<p>Еще условия могут содержать <code>else if</code> часть:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">if i % 2 == 0 {
+    // divisible by 2
+} else if i % 3 == 0 {
+    // divisible by 3
+} else if i % 5 == 0 {
+    // divisible by 5
+}
+</code></pre></div>
+<p>Условия выполняются сверху вниз, и первое условие, которое окажется истинным,
+приведет в исполнение связанный с ним блок.</p>
+
+<p>Собрав всё вместе, мы получим:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">func main() {
+    for i := 1; i &lt;= 10; i++ {
+       if i % 2 == 0 {
+            fmt.Println(i, "even")
+        } else {
+            fmt.Println(i, "odd")
+        }
+    }
+}
+</code></pre></div>
+<p>Давайте рассмотрим эту программу:</p>
+
+<ul>
+<li>  Создать переменную <code>i</code> типа <code>int</code> и присвоить ей значение <code>1</code>;</li>
+<li>  <code>i</code> меньше или равно <code>10</code>? Да - перейти в блок;</li>
+<li>  остаток от <code>i</code> ÷ <code>2</code> равен <code>0</code>? Нет - переходим к блоку <code>else</code>;</li>
+<li>  вывести <code>i</code> вместе с <code>odd</code>;</li>
+<li>  инкрементировать <code>i</code> (оператор после условия);</li>
+<li>  <code>i</code> меньше или равно <code>10</code>? Да - перейти в блок;</li>
+<li>  остаток от <code>i</code> ÷ <code>2</code> равен <code>0</code>? Да - переходим к блоку <code>if</code>;</li>
+<li>  вывести <code>i</code> вместе с <code>even</code>;</li>
+<li>  …</li>
+</ul>
+
+<p>Оператор деления с остатком (деление по модулю), который редко можно увидеть за
+пределами начальной школы, оказывается действительно полезным при
+программировании. Он будет встречаться везде - от раскрашивания таблиц зеброй до
+секционирования наборов данных.</p>
+
+<h2>Switch</h2>
+
+<p>Предположим, мы захотели написать программу, которая печатала бы английские
+названия для чисел. С использованием того, что мы знали до текущего момента, это могло бы
+выглядеть примерно так:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">if i == 0 { 
+    fmt.Println("Zero") 
+} else if i == 1 {
+    fmt.Println("One")
+} else if i == 2 {
+    fmt.Println("Two")
+} else if i == 3 {
+    fmt.Println("Three")
+} else if i == 4 { 
+    fmt.Println("Four")
+} else if i == 5 {
+    fmt.Println("Five")
+}
+</code></pre></div>
+<p>Но эта запись слишком громоздка. Go содержит в себе другой оператор, позволяющий
+делать такие вещи проще: оператор <code>switch</code> (переключатель). С ним программа
+может выглядеть так:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">switch i {
+case 0: fmt.Println("Zero")
+case 1: fmt.Println("One")
+case 2: fmt.Println("Two")
+case 3: fmt.Println("Three")
+case 4: fmt.Println("Four")
+case 5: fmt.Println("Five")
+default: fmt.Println("Unknown Number")
+}
+</code></pre></div>
+<p>Переключатель начинается с ключевого слова <code>switch</code>, за которым следует выражение
+(в нашем случае <code>i</code>) и серия возможных значений (<code>case</code>). Значение выражения по
+очереди сравнивается с выражениями, следующими после ключевого слова <code>case</code>.
+Если они оказываются равны, то выполняется действие, описанное после <code>:</code>.</p>
+
+<p>Как и условия, обход возможных значений осуществляется сверху вниз, и выбирается
+первое значение, которое сошлось с выражением. Переключатель также поддерживает
+действие по умолчанию, которое будет выполнено в случае, если не подошло ни одно
+из возможных значений (напоминает <code>else</code> в операторе <code>if</code>).</p>
+
+<p>Таковы основные операторы управления потоком. Дополнительные операторы будут
+рассмотрены в следующих главах.</p>
+
+<h2>Задачи</h2>
+
+<ul>
+<li><p>Что делает следующий код?</p>
+<div class="highlight"><pre><code class="language-" data-lang="">i := 10
+
+if i &gt; 10 {
+    fmt.Println("Big")
+} else {
+    fmt.Println("Small")
+}
+</code></pre></div></li>
+<li><p>Напишите программу, которая выводит числа от 1 до 100, которые делятся на 3.
+(3, 6, 9, …).</p></li>
+<li><p>Напишите программу, которая выводит числа от 1 до 100. Но для кратных трём
+нужно вывести «Fizz» вместо числа, для кратных пяти - «Buzz», а для
+кратных как трём, так и пяти — «FizzBuzz».</p></li>
+</ul>
+  <div class="nextless">
+    <a href="6.html">Следующий урок: Массивы, срезы, карты →</a>  
+  </div>
+  <div class="backless">
+    <a href="4.html">← Предыдущий урок: Переменные</a>  
+  </div>  
+  
+  </div>  
+          </div>                       
+          </div>
+		</div>        
+      </div>
+    </nav>   
+    <nav class="hidden-md-up"> <!-- На экране телефона -->
+         <ul id="navigation">
+            <li class="main">                           
+              <a href="" title="Главная"><h3>Главная</h3></a>               
+            </li>
+            <li class="about">
+              <a href="" title="Информация"><h3>О GO</h3></a>
+            </li>
+            <li class="teach">
+              <a href="" title="Время учиться!)"><h3>Уроки</h3></a>
+            </li>   
+        </ul>
+    </nav> 
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+            $(function() 
+            {
+                $('#navigation a').stop().animate({'marginLeft':'-85px'},1000);
+
+                $('#navigation > li').hover(
+                    function () 
+                    {
+                        $('a',$(this)).stop().animate({'marginLeft':'-2px'},200);
+                    },
+                    function () 
+                    {
+                        $('a',$(this)).stop().animate({'marginLeft':'-85px'},200);
+                    }
+                );
+            });
+    </script>
+    
+  </body>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../js/bootstrap.min.js"></script>
+</body>
+</html>

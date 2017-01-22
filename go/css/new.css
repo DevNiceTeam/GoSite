@@ -1,0 +1,212 @@
+.header {
+    margin: 30px auto;
+}
+
+body {
+    background-image: url("../img/Melamine-wood-001.png");
+}
+
+h3 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 4;
+    color: black;
+}
+
+.menu__btn {
+    background-image: url("../img/btn.png");
+    width: 200px;
+    max-width: 100%;
+    height: 80px;
+    margin: 20px auto;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 36px;
+    font-family: "Myriad Pro";
+    line-height: 80px;
+    color: #000;
+}
+
+.menu__btn > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    padding: 15px;
+}
+
+.header__logo {
+    float: left;
+    text-align: center;
+}
+
+.hidden-md-up {
+    display: none !important;
+}
+
+.newline {
+    padding: 40px 0;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.newline span {
+    line-height: 234px;
+    text-align: center;
+    font-size: 3em;
+    display: block;
+    font-size: 3em;
+    font-family: "Myriad Pro";
+    color: black;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+}
+
+.textline {
+    padding-top: 20px;
+}
+
+.textline span {
+    font-size: 30px;
+    font-family: "Myriad Pro";
+    color: black;
+}
+
+.gopw {
+    position: relative;
+    padding-top: 35em;
+    left: -13em;
+}
+
+.wiki {
+    position: relative;
+    left: 5em;
+    top: -50em;
+}
+
+.txtlern span {
+    padding-top: 1em;
+    text-align: center;
+    font-size: 3em;
+    display: block;
+    font-size: 3em;
+    font-family: "Myriad Pro";
+    color: black;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+}
+
+.list {
+    position: relative;
+    top: 10px;
+    left: 10em;
+    font-size: 33px;
+    font-family: "Myriad Pro";
+}
+
+.aboutContent span {
+    font-size: 1.3em;
+}
+
+.gopherAbout {
+    background: url(../img/frontpage.png) no-repeat;
+    background-position: center top;
+    height: 155px;
+    padding-top: 2em;
+}
+
+.rama {
+    color: black;
+    border-radius: 3px;
+    background: #E0EBF5;
+    border: 1px solid #375EAB;
+    line-height: 1.5;
+    padding: 20px;
+    text-align: center
+}
+
+.bigTxt {
+    font-size: 3.0em;
+    font-weight: lighter;
+    white-space: nowrap;
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+    .newline span {
+        line-height: 1.2;
+    }
+    .wiki {
+        left: -10em;
+        top: 40em;
+    }
+    .list {
+        left: 7em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .newline span {
+        line-height: 1.2;
+    }
+    .wiki {
+        left: -10em;
+        top: 60em;
+    }
+    .list {
+        left: 5em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        margin-bottom: 310px;
+    }
+    .header__logo {
+        float: none;
+        margin: 0 auto;
+    }
+    .header__menu {
+        position: absolute;
+        top: 10;
+        left: -150px;
+    }
+    .header__menu .menu__btn {
+        position: relative;
+        margin: 20px auto;
+        transition: all .3s;
+        left: 0;
+        background-image: url("../img/btn.png");
+        border-radius: 10px;
+        /* свойство для тех кто его поддерживает */
+        -moz-border-radius: 10px;
+        /* для firefox */
+        -webkit-border-radius: 10px;
+        /* для Safari и Chrome */
+        opacity: 0.8;
+    }
+    .header__menu .menu__btn:hover {
+        left: 150px;
+    }
+    .newline span {
+        line-height: 1.2;
+        font-size: 30px;
+    }
+    .wiki {
+        left: -1em;
+        top: 1em;
+    }
+    .txtlern span {
+        font-size: 2.5em;
+    }
+    .list {
+        left: -1em;
+    }
+    iframe {
+        width: 320px;
+        height: 240px;
+    }
+    .posImg {
+        width: 350px;
+        height: 200px;
+    }
+}

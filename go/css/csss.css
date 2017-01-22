@@ -1,0 +1,353 @@
+
+
+
+
+
+.textInButton {
+    position: absolute;
+    left: 0.5rem;
+    top: 3.1rem;
+    width: 200px;
+    height: 80px;
+    font-size: 36px;
+    font-family: "Myriad Pro";
+    line-height: 0.4;
+    color: black;
+}
+
+.btn_main {
+    background-image: url("../img/btn.png");
+    position: absolute;
+    top: 5rem;
+    left: 7rem;
+    width: 12.5em;
+    height: 5em;
+}
+
+.btn_info {
+    background-image: url("../img/btn.png");
+    position: absolute;
+    top: 5rem;
+    left: 12rem;
+    width: 12.5em;
+    height: 5em;
+}
+
+.btn_teach {
+    background-image: url("../img/btn.png");
+    position: absolute;
+    top: 5rem;
+    left: 17rem;
+    width: 12.5em;
+    height: 5em;
+}
+
+
+
+
+
+.gopFly {
+    background-image: url("../img/gopFly.png");
+    position: absolute;
+    top: 20rem;
+    left: 3rem;
+    width: 16.7em;
+    height: 14.7em;
+}
+
+.txtGoFly {
+    font-size: 3em;
+    font-family: "Myriad Pro";
+    color: black;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+    position: absolute;
+    left: 26rem;
+    top: 5rem;
+    white-space: nowrap;
+}
+
+.gopTxt {
+    font-size: 33px;
+    font-family: "Myriad Pro";
+    color: black;
+    line-height: 1.2;
+    position: absolute;
+    left: -15rem;
+    top: 39rem;
+    width: 814px;
+    height: 631px;
+}
+
+.gopwiki {
+    background-image: url("../img/wiki.png");
+    position: absolute;
+    left: 45rem;
+    top: 37rem;
+    width: 314px;
+    height: 693px;
+}
+
+.gopwatch {
+    background-image: url("../img/gopwatch.png");
+    position: absolute;
+    left: 25rem;
+    top: 70rem;
+    width: 17em;
+    height: 10em;
+}
+
+ul#navigation {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top: 1rem;
+    left: 0px;
+    list-style: none;
+    z-index: 9999;
+}
+
+ul#navigation li a {
+    display: block;
+    width: 10em;
+    height: 4.9em;
+    background-repeat: no-repeat;
+    background-position: -2.1rem center;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-box-shadow: 0px 4px 3px #000;
+  -webkit-box-shadow: 0px 4px 3px #000;
+  
+    opacity: 0.8;
+}
+
+ul#navigation .main a {
+    background-image: url(../img/btn.png);
+}
+
+ul#navigation .about a {
+    background-image: url(../img/btn.png);
+}
+
+ul#navigation .teach a {
+    background-image: url(../img/btn.png);
+}
+
+
+
+div[class^="logo_average"] {
+    position: absolute;
+    left: -2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+div[class^=btn_main_average] {
+    background-image: url("../img/btn.png");
+    position: absolute;
+    top: 5.5rem;
+    left: -6rem;
+    width: 12.5em;
+    height: 5em;
+}
+
+div[class^=btn_info_average] {
+    background-image: url("../img/btn.png");
+    position: absolute;
+    top: 5.5rem;
+    left: -7rem;
+    width: 12.5em;
+    height: 5em;
+}
+
+div[class^=btn_teach_average] {
+    background-image: url("../img/btn.png");
+    position: absolute;
+    top: 5.5rem;
+    left: 50rem;
+    width: 12.5em;
+    height: 5em;
+}
+
+.containsAbout_average {
+    font-size: 1.3em;
+    margin: 0 auto;
+    max-width: 100rem;
+    position: absolute;
+    left: -15rem;
+    top: 15.5rem;
+}
+
+
+
+
+div[class^="logo_notebook"] {
+    position: absolute;
+    left: -3.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+div[class^=btn_main_notebook] {
+    background-image: url("../img/btn.png");
+    position: absolute;
+    top: 5.5rem;
+    left: -15rem;
+    width: 12.5em;
+    height: 5em;
+}
+
+div[class^=btn_info_notebook] {
+    background-image: url("../img/btn.png");
+    position: absolute;
+    top: 5.5rem;
+    left: 22rem;
+    width: 12.5em;
+    height: 5em;
+}
+
+div[class^=btn_teach_notebook] {
+    background-image: url("../img/btn.png");
+    position: absolute;
+    top: 5.5rem;
+    left: 15.6rem;
+    width: 12.5em;
+    height: 5em;
+}
+
+.containsAbout_notebook {
+    font-size: 1.3em;
+    margin: 0 auto;
+    max-width: 100rem;
+    position: absolute;
+    left: -2rem;
+    top: 15.5rem;
+}
+
+
+
+
+div[class^="logo_table"] {
+    position: absolute;
+    left: 14rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.containsAbout_table {
+    font-size: 1.3em;
+    margin: 0 auto;
+    max-width: 100rem;
+    position: absolute;
+    left: 0rem;
+    top: 15.5rem;
+}
+
+
+
+
+div[class^="logo_mobile"] {
+    position: absolute;
+    left: 14rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+div[class^="wiki_mobile"] {
+    background-image: url("../img/wiki.png");
+    position: absolute;
+    left: 6.5rem;
+    top: 20rem;
+    width: 314px;
+    height: 693px;
+}
+
+.containsAbout_mobile {
+    font-size: 1.3em;
+    margin: 0 auto;
+    max-width: 100rem;
+    position: absolute;
+    left: 0rem;
+    top: 15.5rem;
+}
+
+
+
+
+.list {
+    font-size: 33px;
+    font-family: "Myriad Pro";
+    line-height: 1.2;
+    position: absolute;
+    left: 28rem;
+    top: 30rem;
+    width: 814px;
+    height: 631px;
+}
+
+.txtGoFly2 {
+    font-size: 3em;
+    font-family: "Myriad Pro";
+    color: black;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+    position: absolute;
+    left: 18rem;
+    top: 20rem;
+    white-space: nowrap;
+}
+
+.bigTxt {
+    font-size: 3.5em;
+    font-weight: lighter;
+    white-space: nowrap;
+}
+
+.contains {
+    margin: 0 auto;
+    max-width: 900px;
+    padding-left: 100px;
+    padding-right: 100px;
+    position: absolute;
+    left: 15rem;
+    top: 16.5rem;
+}
+
+.txt {
+    font-size: 1.2em;
+}
+
+pre {
+    border-radius: 3px;
+    background: #333;
+    line-height: 1.5;
+    padding: 20px;
+    color: #ccc;
+}
+
+.backless {
+    position: absolute;
+    font-size: 1.4em;
+    left: -0rem;
+    white-space: nowrap;
+}
+
+.nextless {
+    position: absolute;
+    font-size: 1.4em;
+    left: 40rem;
+    white-space: nowrap;
+}
+
+
+
+.containsAbout {
+    font-size: 1.3em;
+    margin: 0 auto;
+    max-width: 100rem;
+    position: absolute;
+    left: 5rem;
+    top: 17rem;
+}
+
+
+
+
